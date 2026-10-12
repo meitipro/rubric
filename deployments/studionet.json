@@ -1,0 +1,278 @@
+{
+  "network": "studionet",
+  "chain_id": 61999,
+  "contract": "0x180a2aF66032CE523E2bab92Fc5e1E0427D9Da0B",
+  "explorer": "https://explorer-studio.genlayer.com/address/0x180a2aF66032CE523E2bab92Fc5e1E0427D9Da0B",
+  "source_sha256": "2522c79aa6e36c00174d07a10b4341a563465f7113e61f225d351a4e47f77eed",
+  "constructor": {},
+  "accounts": {
+    "sponsor": "0x9901A7b34e2867C2CdFD3518E166b59557B963bD",
+    "ann": "0x0FaaE5e6de55Ca5fF589F541b5fF01f9675a9CEd",
+    "ben": "0x88E1879A08e0EE42a93Ed3a3b53532aE757229c2",
+    "cal": "0x7D7DbBDfB28BC4AA71782035e555FC7D1f3EcB60",
+    "dev": "0xCf2F8f189db2050fdaECDA48ebeBD989b888A645",
+    "stranger": "0xCA6C57a56D215832b8C3d53F9F751b0E6031445E"
+  },
+  "balances": {
+    "sponsor_before": "1500000000000000000",
+    "ann_before": "0",
+    "ben_before": "0",
+    "cal_before": "0",
+    "dev_before": "0",
+    "sponsor_after": "1500000000000000000",
+    "ann_after": "500000000000000000",
+    "ben_after": "0",
+    "cal_after": "0",
+    "dev_after": "0"
+  },
+  "held_after": "0",
+  "steps": [
+    {
+      "step": "deploy",
+      "method": "deploy",
+      "from": "0x9901A7b34e2867C2CdFD3518E166b59557B963bD",
+      "tx": "0x1edb206a5b5a424c44a19870662a2466f8659169cada261bdabd52f771025482",
+      "status": "FINALIZED",
+      "ok": true,
+      "refusal": "",
+      "address": "0x180a2aF66032CE523E2bab92Fc5e1E0427D9Da0B"
+    },
+    {
+      "step": "prize 0 opened: 0.5 GEN, three criteria",
+      "method": "open",
+      "from": "0x9901A7b34e2867C2CdFD3518E166b59557B963bD",
+      "tx": "0xae757dfc46d11edd9947b837bd3fcfe7f2a2dc3cbd9356ca69cf81f639d36e0e",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "the sponsor enters its own prize",
+      "method": "enter",
+      "from": "0x9901A7b34e2867C2CdFD3518E166b59557B963bD",
+      "tx": "0x4483394a29ea436d6a52572ef6c59f1c73220ceb329e4f7aae70ecfd709ca271",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] the sponsor cannot enter its own prize"
+    },
+    {
+      "step": "entry 0: Ann",
+      "method": "enter",
+      "from": "0x0FaaE5e6de55Ca5fF589F541b5fF01f9675a9CEd",
+      "tx": "0x3a513fb16e860884367426d28481faf16f299f82f300c969abe5b9ae8b49982c",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "entry 1: Ben, leaves out appeals",
+      "method": "enter",
+      "from": "0x88E1879A08e0EE42a93Ed3a3b53532aE757229c2",
+      "tx": "0x178933a079a5d05a48ef2cc1842b1bd0f5aeeee3867c6a33430458ebf319351c",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "entry 2: Cal, hype",
+      "method": "enter",
+      "from": "0x7D7DbBDfB28BC4AA71782035e555FC7D1f3EcB60",
+      "tx": "0x0300c94d3d7f3775a33f23ca1c8a7a607da6515bf533854bed902ef11504a4ad",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "entry 3: Dev",
+      "method": "enter",
+      "from": "0xCf2F8f189db2050fdaECDA48ebeBD989b888A645",
+      "tx": "0xc04daa47102494beda8cc734848ea1ead89958822ae126bbc7aaed14a86d0237",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "Ann enters a second time",
+      "method": "enter",
+      "from": "0x0FaaE5e6de55Ca5fF589F541b5fF01f9675a9CEd",
+      "tx": "0x7ff48e856c93b3732b02e747e0c805dbc3a7826ee7b87d52a7975fc3e5c0c225",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] an entrant enters once per prize"
+    },
+    {
+      "step": "a judging before entries close",
+      "method": "judge",
+      "from": "0x0FaaE5e6de55Ca5fF589F541b5fF01f9675a9CEd",
+      "tx": "0xda2e7007f407db543ade66e8383f61afd9c8ae0e22de90bca49180b6a8744c01",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] judging opens when entries close at 2026-10-12T06:48:42Z"
+    },
+    {
+      "step": "an entry after entries closed",
+      "method": "enter",
+      "from": "0xCA6C57a56D215832b8C3d53F9F751b0E6031445E",
+      "tx": "0x1b2da61da086024903bcde814c04b981d89ec136cb5885f3921fc3f1726f4f1f",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] entries closed at 2026-10-12T06:48:42Z"
+    },
+    {
+      "step": "a stranger asks for a judging",
+      "method": "judge",
+      "from": "0xCA6C57a56D215832b8C3d53F9F751b0E6031445E",
+      "tx": "0x5dcfe38d92a16dee539bbf16ccb3abe47c456b2e0820f6ca2a0419e3f1dee537",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] only the sponsor or an entrant on this prize may ask for a judging"
+    },
+    {
+      "step": "entry 1 judged: both orders",
+      "method": "judge",
+      "from": "0x9901A7b34e2867C2CdFD3518E166b59557B963bD",
+      "tx": "0x5ec297c49c6933fa7542c5098748a83033fdcf1daadcd1ab8c50d08bd47e7b9c",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "entry 0 judged: both orders",
+      "method": "judge",
+      "from": "0x0FaaE5e6de55Ca5fF589F541b5fF01f9675a9CEd",
+      "tx": "0xf0b8f7fef6352f3f6ae9da98a5588bda4e093e78c880227f62e8962bd41d248a",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "entry 2 judged: both orders",
+      "method": "judge",
+      "from": "0x7D7DbBDfB28BC4AA71782035e555FC7D1f3EcB60",
+      "tx": "0x80ab936d281c35b71c01df92acd869a8b9943b86bf4d163511795e00ef6b1e8b",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    },
+    {
+      "step": "an award while entry 3 waits",
+      "method": "award",
+      "from": "0xCA6C57a56D215832b8C3d53F9F751b0E6031445E",
+      "tx": "0x9e87e5db5093650628a8ed4198285d9cda5a02c70306efb7c5059457e51fa423",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] entry 3 is waiting to be judged until 2026-10-12T07:13:42Z"
+    },
+    {
+      "step": "entry 3 judged after judging closed",
+      "method": "judge",
+      "from": "0xCf2F8f189db2050fdaECDA48ebeBD989b888A645",
+      "tx": "0xd45a6e692a178e29750a67b8932d915f5056fa28de73c8b6604d706dd042e912",
+      "status": "ACCEPTED",
+      "ok": false,
+      "refusal": "[EXPECTED] judging closed at 2026-10-12T07:13:42Z; an entry nobody judged scores nothing at the award"
+    },
+    {
+      "step": "prize 0 awarded",
+      "method": "award",
+      "from": "0xCA6C57a56D215832b8C3d53F9F751b0E6031445E",
+      "tx": "0x9757501ddecd8ef097817faa94e012e364f069fd1d4690e0a746d2742808c4da",
+      "status": "ACCEPTED",
+      "ok": true,
+      "refusal": ""
+    }
+  ],
+  "prizes": [
+    {
+      "prize": {
+        "amount": "500000000000000000",
+        "brief": "One paragraph for someone who has never used a blockchain, explaining how GenLayer decides questions that need judgment.",
+        "criteria": 3,
+        "decided_at": "2026-10-12T07:14:33Z",
+        "entries": 4,
+        "entries_close": "2026-10-12T06:48:42Z",
+        "judge_close": "2026-10-12T07:13:42Z",
+        "judged": 3,
+        "opened_at": "2026-10-12T06:38:42Z",
+        "sponsor": "0x9901A7b34e2867C2CdFD3518E166b59557B963bD",
+        "status": "awarded",
+        "title": "Explain GenLayer to a newcomer in one paragraph",
+        "winner": "0x0FaaE5e6de55Ca5fF589F541b5fF01f9675a9CEd",
+        "winning_entry": 0
+      },
+      "rubric": [
+        {
+          "index": 0,
+          "met": 2,
+          "points": 40,
+          "prize": 0,
+          "text": "States that several validators must agree on a result before it is accepted"
+        },
+        {
+          "index": 1,
+          "met": 1,
+          "points": 30,
+          "prize": 0,
+          "text": "Says that a result can be appealed to a larger group of validators"
+        },
+        {
+          "index": 2,
+          "met": 2,
+          "points": 30,
+          "prize": 0,
+          "text": "Gives one concrete example of a question the network could decide"
+        }
+      ],
+      "entries": [
+        {
+          "at": "2026-10-12T06:39:16.806670Z",
+          "by": "0x0FaaE5e6de55Ca5fF589F541b5fF01f9675a9CEd",
+          "id": 0,
+          "judged_by": "0x0FaaE5e6de55Ca5fF589F541b5fF01f9675a9CEd",
+          "marks": "111",
+          "prize": 0,
+          "reason_is_leader_supplied": true,
+          "score": 100,
+          "text": "GenLayer lets a group of independent validators answer questions that need judgment, such as whether a freelancer's delivered logo matches the brief. Each validator runs the question itself, and the answer is only accepted when they agree. If someone thinks the answer is wrong, they can appeal, and a larger group of validators looks at it again.",
+          "why": "All three criteria clearly addressed in the entry."
+        },
+        {
+          "at": "2026-10-12T06:39:34.562634Z",
+          "by": "0x88E1879A08e0EE42a93Ed3a3b53532aE757229c2",
+          "id": 1,
+          "judged_by": "0x9901A7b34e2867C2CdFD3518E166b59557B963bD",
+          "marks": "101",
+          "prize": 0,
+          "reason_is_leader_supplied": true,
+          "score": 70,
+          "text": "GenLayer is a network where several validators each work out the answer to a question that needs judgment, for example whether an insurance claim describes a covered event, and the result is only accepted once they agree with each other.",
+          "why": "Meets agreement and example criteria but omits appeal."
+        },
+        {
+          "at": "2026-10-12T06:39:54.970899Z",
+          "by": "0x7D7DbBDfB28BC4AA71782035e555FC7D1f3EcB60",
+          "id": 2,
+          "judged_by": "0x7D7DbBDfB28BC4AA71782035e555FC7D1f3EcB60",
+          "marks": "000",
+          "prize": 0,
+          "reason_is_leader_supplied": true,
+          "score": 0,
+          "text": "GenLayer is the future of everything. It is faster, smarter and better than any other chain, and everyone who gets in early will be glad they did. Do not miss out on this revolution.",
+          "why": "It does not explain validator agreement, appeals, or any concrete example of a question GenLayer could decide."
+        },
+        {
+          "at": "2026-10-12T06:40:12.953521Z",
+          "by": "0xCf2F8f189db2050fdaECDA48ebeBD989b888A645",
+          "id": 3,
+          "judged_by": "",
+          "marks": "unjudged",
+          "prize": 0,
+          "reason_is_leader_supplied": true,
+          "score": 0,
+          "text": "On GenLayer many validators answer a judgment question, like whether a translation is faithful to its source, and their answer stands only when they agree. A disputed answer can be appealed to a bigger panel of validators.",
+          "why": ""
+        }
+      ]
+    }
+  ]
+}
